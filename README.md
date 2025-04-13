@@ -30,7 +30,7 @@ class UpdateUserResponse(BaseModel):
 @request_handler
 def update_user(
     user_id: A[int, Path(gt=0)],
-    user: A[dict, Body()],
+    user: A[User, Body()],
 ) -> UpdateUserResponse:
     ...
     return UpdateUserResponse(ok=True)
